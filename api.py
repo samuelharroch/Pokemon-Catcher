@@ -1,5 +1,4 @@
 import json
-from typing import List
 import requests
 
 
@@ -12,7 +11,7 @@ class API:
         full_path = self.api_base + '/'.join([endpoint, id_or_name, ''])
         return requests.get(url=full_path).json()
 
-    def multiple_get_api_call(self, endpoint: str, ids_or_names: List[str]) -> json:
+    def multiple_get_api_call(self, endpoint: str, ids_or_names: list) -> json:
 
         for id_or_name in ids_or_names:
             yield self.get_api_call(endpoint=endpoint, id_or_name=id_or_name)
