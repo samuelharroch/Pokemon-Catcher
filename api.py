@@ -1,5 +1,5 @@
 import json
-from typing import List, Generator
+from typing import List
 import requests
 
 
@@ -12,7 +12,6 @@ class API:
         full_path = self.api_base + '/'.join([endpoint, id_or_name, ''])
         return requests.get(url=full_path).json()
 
-    # consolidate with generator
     def multiple_get_api_call(self, endpoint: str, ids_or_names: List[str]) -> json:
 
         for id_or_name in ids_or_names:

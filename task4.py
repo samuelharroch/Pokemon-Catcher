@@ -1,17 +1,16 @@
 import pandas as pd
 
-"""
-SQL style: 
-
-select generation_name, count(pokemon_name) as pokemon_name_count
-        from GenrationAbilites
-        where pokemon_name is not null
-        group by 1 
-        
-"""
-
 
 def count_pokemons_abilities_by_generation():
+    """
+    SQL style:
+
+    select generation_name, count(pokemon_name) as pokemon_name_count
+            from GenrationAbilites
+            where pokemon_name is not null
+            group by 1
+
+    """
 
     GenrationAbilites = pd.read_csv('GenrationAbilites.csv')
 
