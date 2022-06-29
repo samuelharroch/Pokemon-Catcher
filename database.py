@@ -84,6 +84,7 @@ class Database:
 
     def fetch(self, api: API, endpoint: str, check_item: str, items_to_fetch, table_target: str):
         """
+        check if exist before fetching and save raw data
         :param api: API to fetch from
         :param endpoint: endpoint of the api
         :param check_item: item to check if exist in table_target (base on PK or AK - keys)
